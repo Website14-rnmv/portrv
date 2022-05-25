@@ -1,0 +1,980 @@
+* {
+  font-family: 'Poppins', sans-serif;
+    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #1b1b1b;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.video-inicio {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 30%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.slidershow {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.navigation {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-around;
+  z-index: 1;
+}
+.navigation .buttons-bot{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+.navigation .buttons-bot span{
+  color: #ccc;
+  font-size: 13px;
+  margin: 0px 0 0 0;
+}
+.navigation label {
+  color: #ccc;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: .5s;
+
+}
+.navigation .buttons-bot label:hover {
+  transform: translateY(-5px);
+  color: white;
+  font-size: 18px;
+  transition: .5s;
+}
+
+.navigation::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 1px;
+  background-color: #ccc;
+  bottom: 30%;
+  left: -50px;
+}
+
+.navigation::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 1px;
+  background-color: white;
+  bottom: 30%;
+  right: -50px;
+}
+
+.bar {
+  width: 50px;
+  height: 10px;
+  text-align: center;
+  margin: 6px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+input[name=r] {
+  position: absolute;
+  visibility: hidden;
+}
+
+.slides {
+  width: 500%;
+  height: 100%;
+  display: flex;
+}
+
+.slide {
+  width: 20%;
+  transition: 0.6s;
+}
+
+#r1:checked ~ .s1 {
+  margin-left: 0;
+}
+
+#r2:checked ~ .s1 {
+  margin-left: -20%;
+}
+
+#r3:checked ~ .s1 {
+  margin-left: -40%;
+}
+
+#r4:checked ~ .s1 {
+  margin-left: -60%;
+}
+
+#r5:checked ~ .s1 {
+  margin-left: -80%;
+}
+
+/*INICIO*/
+.inicio {
+  width: 100%;
+  position: relative;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.39);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inicio p {
+  color: white;
+}
+
+.text-inicio {
+  text-align: center;
+  z-index: 1;
+}
+.text-inicio h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 80px;
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+}
+.text-inicio P {
+  color: #ccc;
+  margin: 10px 0 30px 0;
+}
+.text-inicio .proyects {
+  font-size: 15px;
+  margin: 20px 0;
+  padding: 13px 20px;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+.text-inicio .proyects:hover {
+  background-color: rgba(0, 0, 0, 0.171);
+  transition: 0.5s;
+}
+
+.logo {
+  position: fixed;
+  top: 30px;
+  left: 55px;
+  z-index: 1;
+}
+.logo img {
+  width: 120px;
+}
+
+.colgante {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  width: 15%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.colgante h4 {
+  color: white;
+  margin: 0 5px;
+}
+.colgante h4 i {
+  font-size: 12px;
+}
+.colgante p {
+  font-size: 12px;
+  color: white;
+}
+.colgante span {
+  font-size: 12px;
+  color: white;
+  margin-left: 20px;
+  display: inline-block;
+  padding: 5px;
+  border: 1px solid white;
+}
+
+/*SOBRE MI */
+.sobre-mi {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.39);
+}
+.sobre-mi h1 {
+  font-size: 50px;
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+  position: relative;
+  bottom: 5%;
+}
+.sobre-mi .ronaldo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+}
+.sobre-mi .ronaldo .wid {
+  width: 400px;
+  padding: 15px;
+}
+.sobre-mi .ronaldo .wid h4 {
+  color: white;
+  position: relative;
+  padding: 10px 0;
+}
+.sobre-mi .ronaldo .wid h4::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  outline: 1px solid white;
+  background-color: transparent;
+  bottom: 0;
+}
+.sobre-mi .ronaldo .wid p {
+  color: white;
+  font-size: 15px;
+  margin: 10px 0;
+  color: #ccc;
+}
+
+/*Skills*/
+.skills {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.39);
+  z-index: 2;
+}
+.skills .skill-text {
+  position: relative;
+  bottom: 10%;
+  text-align: center;
+}
+.skills .skill-text h1 {
+  font-size: 50px;
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+  text-transform: uppercase;
+}
+.skills .skill-text p {
+  font-size: 15px;
+  color: #ccc;
+}
+.skills .habilidades {
+  display: grid;
+  grid-template-columns: repeat(1, 2fr);
+  position: relative;
+}
+.skills .habilidades .wid-skill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+}
+.skills .habilidades .wid-skill i {
+  color: white;
+  font-size: 50px;
+  margin: 0 30px;
+}
+.img-icon{
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+}
+
+
+/* Add this attribute to the element that needs a tooltip */
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 250%;
+  left: 50%;
+  margin-bottom: 5px;
+  margin-left: -80px;
+  padding: 10px;
+  width: auto;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #000;
+  background-color: hsla(0, 0%, 0%, 0.884);
+  color: #fff;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 600;
+  transition: .3s;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid #000;
+  border-top: 5px solid hsla(0, 100%, 50%, 0);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+
+
+
+
+
+/*PORTAFOLIO*/
+.portafolio {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-around;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.448);
+  cursor: pointer;
+}
+
+.title-pro {
+  position: absolute;
+  top: 46%;
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+  text-transform: uppercase;
+}
+
+.flex_wid {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.letras {
+  position: absolute;
+  color: white;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+}
+
+.flex_wid:hover .letras {
+  background-color: rgba(0, 0, 0, 0.634);
+  padding: 2% 0;
+  width: 1000%;
+}
+
+.letras a {
+  color: rgba(190, 190, 190, 0.795);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.letras p {
+  margin: 0;
+  font-size: 13px;
+  color: rgba(190, 190, 190, 0.795);
+
+}
+
+.flex_wid:hover .ancla {
+  color: white;
+  transition: 0.4s;
+  text-decoration: none;
+}
+.flex_wid:hover .letras p {
+  color: white;
+  transition: 0.4s;
+  text-decoration: none;
+}
+.ancla {
+  text-decoration: none;
+}
+
+/**********************************************/
+.wid-1 {
+  width: 100%;
+  overflow: hidden;
+}
+
+.wid-1 img {
+  background-size: cover;
+  background-position: center;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  opacity: 0;
+  transition: 0.9s;
+}
+
+.wid-1:hover .esconder {
+  visibility: visible;
+  opacity: 100%;
+}
+
+/***********************************************/
+.wid-2 {
+  width: 100%;
+  overflow: hidden;
+}
+
+.wid-2 img {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.wid-2:hover .esconder {
+  visibility: visible;
+  opacity: 100%;
+}
+
+/***********************************************/
+.wid-3 {
+  width: 100%;
+  overflow: hidden;
+}
+
+.wid-3 img {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.wid-3:hover .esconder {
+  visibility: visible;
+  opacity: 100%;
+}
+
+/***********************************************/
+.wid-4 {
+  width: 100%;
+  overflow: hidden;
+}
+
+.wid-4 img {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.wid-4:hover .esconder {
+  visibility: visible;
+  opacity: 100%;
+}
+
+/*CONTACTO*/
+.contacto {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10%;
+  background-color: rgba(0, 0, 0, 0.39);
+  z-index: 1;
+}
+
+form {
+  z-index: 1;
+  width: 70%;
+  margin: 0 20px 0 0;
+}
+form h1 {
+  font-size: 32px;
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+  text-transform: uppercase;
+}
+form .cajon {
+  width: 100%;
+}
+form .cajon input {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.514);
+  border: 0;
+  outline: none;
+  color: white;
+  padding: 15px;
+  margin: 10px 0;
+  font-size: 14px;
+
+}
+form .cajon input:focus {
+  border: none;
+}
+form .cajon textarea {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.514);
+  border: 0;
+  outline: none;
+  color: white;
+  padding: 10px;
+  margin: 10px 0;
+}
+form .btnEnviar {
+  width: 100%;
+  color: white;
+  padding: 10px;
+  border: 1px solid white;
+  background-color: transparent;
+  cursor: pointer;
+}
+form .btnEnviar:hover {
+  background-color: rgba(0, 0, 0, 0.438);
+  transition: 0.5s;
+}
+
+.others {
+  z-index: 1;
+  width: 30%;
+  margin:0 5%;
+}
+.others h4 {
+  color: white;
+  font-size: 25px;
+}
+.others p {
+  color: #ccc;
+  font-size: 14px;
+  text-align: justify;
+}
+.others ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 5px 0;
+}
+.others ul li {
+  margin-right: 10px;
+}
+.others ul a {
+  color: #ccc;
+  cursor: pointer;
+}
+.list-dos{
+  position: relative;
+  top: 10px;
+}
+.list-dos li a {
+  font-size: 22px;
+  padding: 0 10px 0 0 ;
+  text-decoration: none;
+  border-right: 1px solid  #ccc;
+}
+.list-dos li .fa-whatsapp{
+  border-right: none;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    background: #1b1b1b;
+    width: auto;
+    height: auto;
+  }
+
+  .text-inicio p {
+    padding: 0 5%;
+  }
+
+  .slidershow {
+    width: 100%;
+    height: 100%;
+  }
+
+  .navigation {
+    position: fixed;
+    bottom: 0;
+    padding: 15px 0 20px 0;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.342);
+    width: 100%;
+  }
+  .navigation label {
+    font-size: 25px;
+  }
+
+  .navigation::before {
+    display: none;
+  }
+
+  .navigation::after {
+    display: none;
+  }
+
+  /*SOBRE MI */
+  .sobre-mi h1 {
+    font-size: 40px;
+    bottom: 5%;
+  }
+  .sobre-mi .ronaldo {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    position: relative;
+  }
+  .sobre-mi .ronaldo .wid {
+    width: 500px;
+  }
+
+  /*PORTAFOLIO*/
+  .portafolio {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .letras a {
+    font-size: 15px;
+  }
+
+  .title-pro {
+    top: 45%;
+  }
+
+  /*CONTACTO*/
+  .contacto {
+    padding: 0 5% 0 10%;
+    flex-direction: column;
+  }
+
+  form {
+    width: 100%;
+  }
+  form h1 {
+    position: relative;
+    bottom: 5%;
+    text-align: center;
+  }
+
+  .others {
+    width: 100%;
+    margin: 50px 0;
+    text-align: center;
+  }
+  .others p {
+    text-align: center;
+    margin: 10px 0;
+  }
+  .others ul {
+    justify-content: center;
+  }
+}
+/*LOGO  Y ESTRUC*/
+@media (min-width: 320px) and (max-width: 480px) {
+  body {
+    background: #1b1b1b;
+    width: auto;
+    height: auto;
+  }
+
+  .text-inicio h1 {
+    font-size: 50px;
+  }
+  .text-inicio p {
+    font-size: 10px;
+    padding: 0 5%;
+  }
+  .text-inicio a {
+    font-size: 10px;
+  }
+  .text-inicio  .proyects{
+    font-size: 12px;
+  }
+
+  .slidershow {
+    width: 100%;
+    height: 100%;
+  }
+
+  .navigation {
+    position: fixed;
+    bottom: 0;
+    padding: 5px 0 5px 0;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.342);
+    width: 100%;
+  }
+  .navigation label {
+    font-size: 13px;
+  }
+
+  .navigation::before {
+    display: none;
+  }
+
+  .navigation::after {
+    display: none;
+  }
+
+  .logo {
+    top: 25px;
+    left: 20px;
+  }
+  .logo img {
+    width: 100px;
+  }
+
+  .colgante {
+    top: 25px;
+    right: 25px;
+  }
+  .colgante p {
+    font-size: 5px;
+    margin: 0 5px;
+  }
+  .colgante span {
+    font-size: 8px;
+    margin: 0;
+  }
+
+  /*SOBRE MI */
+  .sobre-mi h1 {
+    font-size: 25px;
+    bottom: 0;
+  }
+  .sobre-mi .ronaldo {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    position: relative;
+  }
+  .sobre-mi .ronaldo .wid {
+    width: 280px;
+    padding: 10px;
+  }
+  .sobre-mi .ronaldo .wid h4 {
+    font-size: 12px;
+  }
+  .sobre-mi .ronaldo .wid p {
+    font-size: 10px;
+  }
+
+  /*Skills*/
+  .skills {
+    padding: 0 5%;
+  }
+  .skills .skill-text h1 {
+    font-size: 25px;
+  }
+  .skills .skill-text p {
+    font-size: 10px;
+  }
+  .skills .habilidades {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    position: relative;
+  }
+  .skills .habilidades .wid-skill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+  }
+ 
+  .skills .habilidades .wid-skill i {
+    color: white;
+    font-size: 27px;
+    margin: 0 20px;
+}
+.img-icon{
+  width: 27px;
+  height: 27px;
+}
+.wid-skill p{
+  width: 50px;
+}
+
+  /*PORTAFOLIO*/
+  .portafolio {
+   
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20% 0;
+  }
+
+  .title-pro {
+    top: 48%;
+  }
+  .title-pro h1 {
+    font-size: 25px;
+  }
+
+  .letras a {
+    font-size: 10px;
+  }
+  .letras p {
+    font-size: 8px;
+  }
+
+  /*CONTACTO*/
+  .contacto {
+    flex-direction: column;
+    padding: 0 5% 0 10%;
+    align-items: center;
+  }
+
+  form {
+    width: 100%;
+  }
+  form .cajon input {
+    padding: 10px 10px;
+    font-size: 13px;
+    width: 100%;
+  }
+  form h1 {
+    position: relative;
+    bottom: 3%;
+    text-align: center;
+    font-size: 22px;
+    -webkit-text-stroke: 0.5px white;
+
+  }
+
+  .others {
+    width: 100%;
+    margin: 20px 0 0 0;
+    text-align: center;
+    position: relative;
+    left: -10px;
+  }
+  .others h4 {
+    font-size: 15px;
+  }
+  .others p {
+    font-size: 10px;
+    margin: 10px 0;
+    text-align: center;
+    padding: 0 5px;
+  }
+  .others ul {
+    justify-content: center;
+    padding:0 0 0 7%;
+  }
+
+  .navigation .buttons-bot{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 ;
+  }
+  .navigation .buttons-bot span{
+    color: #ccc;
+    font-size: 9px;
+    margin: 0px 0 0 0;
+  }
+  .navigation label {
+    color: #ccc;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    transition: .5s;
+  
+  }
+  [data-tooltip]:before {
+  
+    font-size: 10px;
+    left: 90px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
