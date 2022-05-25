@@ -830,6 +830,8 @@ form .btnEnviar:hover {
   .sobre-mi h1 {
     font-size: 25px;
     bottom: 0;
+    -webkit-text-stroke: 0.5px white;
+
   }
   .sobre-mi .ronaldo {
     display: grid;
@@ -852,7 +854,9 @@ form .btnEnviar:hover {
     padding: 0 5%;
   }
   .skills .skill-text h1 {
-    font-size: 25px;
+    font-size: 30px;
+    -webkit-text-stroke: 0.5px white;
+
   }
   .skills .skill-text p {
     font-size: 10px;
@@ -886,7 +890,7 @@ form .btnEnviar:hover {
   .portafolio {
    
     grid-template-columns: repeat(2, 1fr);
-    padding: 20% 0;
+    padding: 0 0  20% 0;
   }
 
   .title-pro {
@@ -894,6 +898,8 @@ form .btnEnviar:hover {
   }
   .title-pro h1 {
     font-size: 25px;
+    -webkit-text-stroke: 0.5px white;
+
   }
 
   .letras a {
