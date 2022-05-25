@@ -814,11 +814,12 @@ form .btnEnviar:hover {
   }
 
   .colgante {
-    top: 25px;
-    right: 25px;
+    width: 80px;
+    top: 23px;
+    right: 20px;
   }
   .colgante p {
-    font-size: 5px;
+    font-size: 8px;
     margin: 0 5px;
   }
   .colgante span {
